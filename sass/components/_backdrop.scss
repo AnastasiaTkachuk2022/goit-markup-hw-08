@@ -1,0 +1,194 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(47, 48, 58, 0.4);
+    opacity: 1;
+    transition: opacity 500ms var(--main-timing-function);
+        &.is-hidden {
+            opacity: 0;
+            visibility: 0;
+            pointer-events: none;
+        }
+    
+}
+.modal {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    width: 528px;
+    height: 581px;
+
+    background-color: var(--accent-color-white);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 500ms var(--main-timing-function);
+        .backdrop.is-hidden & {
+            transform: translate(-50%, -50%) scale(0);
+            
+        }
+}
+.modal-button {
+    @extend %justify;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: fill 250ms var(--main-timing-function);
+}
+.modal-button:hover .modal-icon,
+.modal-button:focus .modal-icon {
+    fill: var(--accent-color-blue);
+}
+.form-modal {
+    padding: 40px;
+}
+.title-modal {
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 30px;
+}
+.contact-wrapper {
+    position: relative;
+    margin-bottom: 28px;
+}
+.icon-contact-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    transition: fill 250ms var(--main-timing-function);
+
+        .input-modal:hover ~ &,
+        .input-modal:focus ~ & {
+        fill: var(--accent-color-blue);
+    }
+}
+.input-modal {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding-left: 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: border 250ms var(--main-timing-function);
+
+        &:hover,
+        &:focus {
+            outline: none;
+            border: 1px solid var(--accent-color-blue);
+        
+    }
+}
+
+
+.label-modal {
+    position: absolute;
+    top: -18px;
+    left: 0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: var(--text-color);
+        .checkbox-modal + & {
+            line-height: 1.71;
+            letter-spacing: 0.03em;
+            cursor: pointer;
+        }
+}
+
+.comment-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+}
+.modal-comment {
+    display: flex;
+    width: 100%;
+    height: 120px;
+    padding: 12px 16px;
+    resize: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border 250ms var(--main-timing-function);
+        &:hover,
+        &:focus {
+            outline: none;
+            border: 1px solid var(--accent-color-blue);
+        }
+}
+
+
+.checkbox-wrapper {
+    @extend %justify;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.checkbox-label {
+    @extend %align;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--text-color);
+        &::before {
+            display: inline-block;
+            content: '';
+            width: 16px;
+            height: 15px;
+            margin-right: 8px;
+            border: 2px solid var(--main-black-color);
+            border-radius: 15%;
+        
+            .checkbox-modal:checked + & {
+                background-image: url('../images/icons/icon-check.svg');
+                background-size: cover;          
+                border: var(--accent-color-blue);
+            }
+            .checkbox-modal:focus + & {        
+                border: 1px solid #212121;
+            }
+        }
+}
+.policy-link {
+    color: var(--accent-color-blue);
+}
+.submit-btn {
+    display: block;
+    margin: 0 auto;
+
+    min-width: 200px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 1.88;
+    text-align: center;
+    letter-spacing: 0.06em;
+    
+    color: var(--accent-color-white);
+    background-color: var(--accent-color-blue);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: var(--accent-color-blue);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 250ms var(--main-timing-function);
+
+        &:hover,
+        &:focus {
+            outline: none;
+            background-color: var(--extra-blue);
+        
+        }
+}
