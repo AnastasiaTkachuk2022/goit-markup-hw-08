@@ -8,13 +8,14 @@
 
 }
 .header__container {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     // background-color: tomato;
 }
 .header {
-    position: relative;
+    
     padding: 15px 16px;
     border-bottom: 1px solid var(--border-line);
 }
