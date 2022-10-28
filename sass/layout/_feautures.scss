@@ -1,15 +1,22 @@
+.feautures__icon {
+        @extend %justify;
+        width: 450px;
+        height: 120px;
+        margin-bottom: 56px;
+
+        background-color:var(--bg-light);
+        border-radius: 4px;
+}
+
+// desktop   width: 270px;
+//   height: 120px;
+
 // .feautures__group {
 //     display: flex;
 //     align-items: center;
 //     justify-content: space-between;
 // }
-// .feautures__element {
-//     @extend %justify;
-//     width: 270px;
-//     height: 120px;
-//     margin-bottom: 30px;
-//     background-color:var(--bg-light);
-//     border-radius: 4px;
+// 
     
 // }
 // .feautures__list {
