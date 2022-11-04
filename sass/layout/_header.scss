@@ -1,3 +1,8 @@
+.header__container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
 .menu {
     display: flex;
     justify-content: space-between;
@@ -8,37 +13,39 @@
     display: flex;
     align-items: center;
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
-    .menu__list {
-        display: none;
-        }
-    
-    .nav-contact {
-        display: none;
-    }
-}
-@media screen and (min-width: 768px) {
-    .burger-menu-btn {
-        display: none;
-    }
-    
-        
-}
 
 .menu__link {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-
-    &_current {
-        color: var(--accent-color-blue);
-    }
-   
+    text-align: center;
+    color: var(--main-black-color);
+    transition: color 250ms var(--main-timing-function);
+        &:hover,
+        &:focus {
+            color: var(--accent-color-blue);
+        }   
 }
-.menu__item:not(:last-child) {
-            margin-right: 50px;
+.menu__link_current {
+    position: relative;
+    color: var(--accent-color-blue);
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 4px;
+        bottom: 0;
+        left: 0;
+        background-color: var(--accent-color-blue);
+        border-radius: 2px;
         }
+}
+
+.menu__item:not(:last-child) {
+    margin-right: 50px;
+}
 
 
 .header {
@@ -54,6 +61,15 @@
 .nav-contact__link {
     display: flex;
     align-items: center;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    transition: color 250ms var(--main-timing-function);
+        &:hover,
+        &:focus {
+            color: var(--accent-color-blue);
+        } 
 }
 .nav-contact__icon {
     margin-right: 8px;
@@ -69,23 +85,57 @@
         fill: var(--accent-color-blue);
     }      
     }
+.nav-contact__item:not(:last-child) {
+    margin-bottom: 10px;
+}
+.header__logo {
+    margin-right: 88px;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .menu__list {
+        display: none;
+    }
+
+    .nav-contact {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .burger-menu-btn {
+        display: none;
+    }
+
+
+}
+
 @media screen and (min-width: 1200px) {
+    .nav-contact__link {
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+    }
     .nav-contact__icon {
         margin-right: 10px;
     }
-    
+
+    .nav-contact {
+        display: flex;
+    }
+
+    .nav-contact__item {
+        margin-bottom: 0;
+
+        &:not(:last-child) {
+            margin-right: 50px;
+        }
+    }
+    .header__logo {
+        margin-right: 93px;
+    }
 }
 // .menu__link {
-//     font-weight: 500;
-//     font-size: 40px;
-//     line-height: 1.18;
-//     text-align: center;
-//     letter-spacing: 0.02em;
-//     color: var(--main-black-color);
-//     transition: color 250ms var(--main-timing-function);
-//         &:hover,
-//         &:focus {
-//             color: var(--accent-color-blue);
+//     
 //         //             }   
 // }
 // }
@@ -109,22 +159,7 @@
     //                 padding-bottom: 32px;
     //         }   
     //     }
-    //     .menu__link_current {
-    //             position: relative;
-    //             color: var(--accent-color-blue);
-
-    //             @media screen and (min-width: 768px) {
-    //                 &::after {
-    //                         position: absolute;
-    //                         content: "";
-    //                         width: 100%;
-    //                         height: 4px;
-    //                         bottom: 0;
-    //                         left: 0;
-    //                         background-color: var(--accent-color-blue);
-    //                         border-radius: 2px;
-    //                     }
-    //             }
+    //     
 
     //     }
 
@@ -204,11 +239,7 @@
 //         color: var(--text-color);
     
     
-//         transition: color 250ms var(--main-timing-function);
-//             &:hover,
-//             &:focus {
-//                 color: var(--accent-color-blue);
-//             } 
+//         
 //     }
 //     @media screen and (min-width: 1200px) {
 //         padding: 32px o;
