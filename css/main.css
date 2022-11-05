@@ -522,7 +522,7 @@ img {
   margin-right: 88px;
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .menu__list {
     display: none;
   }
@@ -557,6 +557,12 @@ img {
     margin-right: 93px;
   }
 }
+.hero {
+  padding: 118px 0;
+  text-align: center;
+  background-color: #C4C4C4;
+}
+
 .hero-title {
   font-weight: 900;
   font-size: 26px;
@@ -564,21 +570,80 @@ img {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
   color: var(--accent-color-white);
-  background-color: black;
 }
 
+.button {
+  display: inline-block;
+  padding: 10px 22px;
+  min-width: 216px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: var(--accent-color-blue);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--accent-color-white);
+  background-color: var(--accent-color-blue);
+  cursor: pointer;
+  transition: color 250ms var(--main-timing-function), background-color 250ms var(--main-timing-function);
+}
+.button:hover, .button:focus {
+  color: var(--accent-color-white);
+  background-color: var(--extra-blue);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 360px) {
+  .hero-title {
+    width: 360px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .hero-title {
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
+    width: 700px;
+  }
+  .hero {
+    max-width: 1600px;
+    padding: 200px 0;
   }
 }
 .feautures__icon {
-  width: 450px;
-  height: 120px;
+  width: 100vw;
   margin-bottom: 56px;
   background-color: var(--bg-light);
   border-radius: 4px;
+}
+
+.feautures__title {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.feautures__description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  width: 450px;
+  color: var(--text-color);
+  overflow: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .feautures__title {
+    text-align: center;
+  }
 }/*# sourceMappingURL=main.css.map */
