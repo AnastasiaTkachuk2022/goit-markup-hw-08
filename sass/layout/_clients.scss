@@ -1,32 +1,87 @@
-// .clients-title {
-//     font-size: 36px;
-//     line-height:1.17;
-//     text-align: center;
-//     letter-spacing: 0.03em;
-//     margin-bottom: 50px;
-// }
-// .clients-list {
-//     display: flex;
-//     justify-content: space-between;
-// }
-// .clients-link {
-//     @extend %justify;
-//     width: 170px;
-//     height: 92px;
-//     border: 1px solid var(--icon-color);
-//     border-radius: 4px;
-//     transition: border 250ms var(--main-timing-function);
-//         &:hover,
-//         &:focus {
-//             border: 1px solid var(--accent-color-blue);
-//         }
-// }
+.clients-title {
+    font-size: 28px;
+    line-height: 1.18;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 30px;
+}
 
-// .clients-icon {
-//     fill: var(--icon-color);
-//     transition: fill 250ms var(--main-timing-function);
+.clients-icon {
+    fill: var(--icon-color);
+    transition: fill 250ms var(--main-timing-function);
 
-//         .clients-link:hover & {
-//             fill: var(--accent-color-blue);
-//         }
-// }
+        .clients-link:hover & {
+            fill: var(--accent-color-blue);
+        }
+}
+.clients-link {
+    @extend %justify;
+    // width: 210px;
+    height: 92px;
+    // margin-right: 30px;
+    // margin-bottom: 30px;
+    border: 1px solid var(--icon-color);
+    border-radius: 4px;
+    transition: border 250ms var(--main-timing-function);
+        &:hover,
+        &:focus {
+            border: 1px solid var(--accent-color-blue);
+        }
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+    
+}
+.clients-item {
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+.clients-list {
+    display: flex;
+    // justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+@media screen and (max-width: 1119px) {
+    .clients-list {
+        margin-top: -30px;
+        margin-left: -30px;
+    }
+    .clients-item {
+        margin-top: 30px;
+        margin-left: 30px;
+    }
+}
+@media screen and (min-width: 345px) {
+    .clients-item {
+        flex-basis: calc((100% - 60px) / 2);
+    }
+}
+@media screen and (min-width: 768px) {
+    // .clients-link {
+    //     // width: 226px;
+        
+    //     // &:nth-child(3n) {
+    //     //     margin-right: 0;
+    //     // }
+    // }
+    .clients-item {
+        flex-basis: calc((100% - 90px) / 3);
+    }
+}
+@media screen and (min-width: 1200px) {
+    .clients-title {
+        font-size: 36px;
+        line-height: 1.17;
+        margin-bottom: 50px;
+    }
+    .clients-link {
+        width: 170px;
+        
+    }
+    .clients-item {
+        flex-basis: calc((100% - 180px) / 6);
+    }
+}
+
