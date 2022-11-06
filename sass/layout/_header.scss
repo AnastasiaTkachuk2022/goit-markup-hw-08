@@ -97,9 +97,6 @@
         fill: var(--accent-color-blue);
     }      
     }
-.nav-contact__item:not(:last-child) {
-    margin-bottom: 10px;
-}
 
 @media screen and (max-width: 767px) {
     .menu__list {
@@ -119,6 +116,9 @@
         &.tel {
             padding-bottom: 21px;
         }
+    }
+    .nav-contact__item:not(:last-child) {
+        margin-bottom: 10px;
     }
 }
                 
