@@ -426,10 +426,16 @@ img {
   min-height: 796px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 48px;
-  padding-bottom: 48px;
+  padding-top: 28px;
+  padding-bottom: 28px;
   position: relative;
   overflow: auto;
+}
+@media screen and (min-width: 480px) {
+  .mobile-menu__container {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
 }
 
 .burger-menu-btn {
@@ -477,8 +483,8 @@ img {
 
 .mobile-menu__close-btn {
   position: absolute;
-  top: 10px;
-  right: 15px;
+  top: 5px;
+  right: 18px;
   background-color: transparent;
   border: none;
   padding: 0;
@@ -487,6 +493,12 @@ img {
 }
 .mobile-menu__close-btn:hover .mobile-menu__icon, .mobile-menu__close-btn:focus .mobile-menu__icon {
   fill: var(--accent-color-blue);
+}
+@media screen and (min-width: 480px) {
+  .mobile-menu__close-btn {
+    top: 10px;
+    right: 15px;
+  }
 }
 @media screen and (min-width: 768px) {
   .mobile-menu__close-btn {
@@ -500,7 +512,7 @@ img {
 
 .mobile-menu__link {
   font-weight: 400;
-  font-size: 38px;
+  font-size: 30px;
   line-height: 0.98;
   text-align: center;
   letter-spacing: 0.01em;
