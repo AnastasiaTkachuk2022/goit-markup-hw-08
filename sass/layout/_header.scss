@@ -6,7 +6,6 @@
 .header {
     position: relative;
     border-bottom: 1px solid var(--border-line);
-    // background-color: aquamarine;
 }
 
 .header__container {
@@ -15,10 +14,10 @@
     align-items: center;
 }
 .header__logo {
-    &.link{
-        padding-top: 16px;
-        padding-bottom: 16px;
-    }
+    // &.link{
+    //     padding-top: 16px;
+    //     padding-bottom: 16px;
+    // }
     margin-right: 88px;
 }
 .menu {
@@ -66,9 +65,6 @@
 .menu__item:not(:last-child) {
     margin-right: 50px;
 }
-
-
-
 .nav-contact__link {
     display: flex;
     align-items: center;
@@ -76,6 +72,7 @@
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.02em;
+    color: var(--text-color);
     transition: color 250ms var(--main-timing-function);
         &:hover,
         &:focus {
@@ -98,6 +95,21 @@
     }      
     }
 
+
+@media screen and (min-width:768px) and (max-width: 1199px) {
+    // .nav-contact__link {
+    //     &.mail {
+    //         padding-top: 21px;
+    //     }
+
+    //     &.tel {
+    //         padding-bottom: 21px;
+    //     }
+    // }
+    .nav-contact__item:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
 @media screen and (max-width: 767px) {
     .menu__list {
         display: none;
@@ -107,21 +119,6 @@
         display: none;
     }
 }
-@media screen and (max-width: 1119px) {
-    .nav-contact__link {
-        &.mail {
-            padding-top: 21px;
-        }
-
-        &.tel {
-            padding-bottom: 21px;
-        }
-    }
-    .nav-contact__item:not(:last-child) {
-        margin-bottom: 10px;
-    }
-}
-                
 @media screen and (min-width: 768px) {
     .burger-menu-btn {
         display: none;
@@ -132,7 +129,10 @@
             padding-bottom: 26px;
         }
     }
-
+    .menu__link {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -140,8 +140,8 @@
         font-size: 14px;
         line-height: 1.14;
         letter-spacing: 0.02em;
-        padding-top: 32px;
-        padding-bottom: 32px;
+        // padding-top: 32px;
+        // padding-bottom: 32px;
     }
     .nav-contact__icon {
         margin-right: 10px;
@@ -167,10 +167,7 @@
         }
             
     }
-    .menu__link {
-        padding-top: 32px;
-        padding-bottom: 32px;
-    }
+    
 }
 
 

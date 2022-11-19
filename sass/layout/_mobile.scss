@@ -15,15 +15,18 @@
     border: none;
     padding: 0;
     line-height: 0;
+    &:hover .burger-menu_icon,
+    &:focus .burger-menu_icon {
+        fill: var(--accent-color-blue);
+    }
 }
 .mobile-menu {
-    position: absolute;
+    position: fixed;
+    // position: absolute;
     top: 0;
     left: 0;
-
     width: 100%;
-    height: 100vh;
-    
+    height: 100vh;   
     overflow: auto;
     opacity: 0;
     visibility: hidden;
@@ -44,7 +47,11 @@
         
 }
 .mobile-menu_list {
-    margin-bottom: 302px;
+    margin-bottom: 150px;
+    @media screen and (min-width: 480px) {
+        margin-bottom: 302px;
+    }
+    
 }
 
 .mobile-menu__close-btn {
@@ -58,8 +65,8 @@
     line-height: 0;
     transition: color 250ms var(--main-timing-function);
     &:hover .mobile-menu__icon, 
-    &:focus .mobile-menu__icon{
-        color: var(--accent-color-blue);
+    &:focus .mobile-menu__icon {
+        fill: var(--accent-color-blue);
     }
 
     @media screen and (min-width: 768px) {
@@ -71,19 +78,27 @@
     margin-bottom: 64px;
 }
 .mobile-menu__link {
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 1.18;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 0.98;
     text-align: center;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.01em;
 
     &_current {
         color: var(--accent-color-blue);
     }
-
+    @media screen and (min-width: 480px) {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 1.18;
+    }
 }
 .mobile-menu__item:not(:last-child) {
-    margin-bottom: 32px;
+    margin-bottom: 21px;
+    @media screen and (min-width: 480px) {
+        margin-bottom: 32px;
+    }
+    
 }
 .mobile-contact__link.tel {
     font-weight: 500;
@@ -103,7 +118,11 @@
     color: var(--text-color);
     }
 .mobile-contact__item:not(:last-child) {
-    margin-bottom: 32px;
+    margin-bottom: 22px;
+    @media screen and (min-width: 480px) {
+        margin-bottom: 32px;
+    }
+    
 }
 .mobile-socials {
     display: flex;
