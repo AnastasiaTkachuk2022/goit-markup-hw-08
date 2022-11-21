@@ -35,11 +35,11 @@
     }
     @media screen and (min-width: 480px) {
         width: 450px;
-        // height: 608px;
+        height: 609px;
     }
     @media screen and (min-width: 1199px) {
         width: 528px;
-        height: 582px;
+        height: 581px;
         
     }
 }
@@ -171,7 +171,7 @@
     
     @extend %justify;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 13px;
     @media screen and (min-width: 480px) {
         margin-bottom: 30px;
     }
